@@ -1,0 +1,98 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 768px;
+    margin: 1rem auto;
+    font-family: sans-serif;
+    padding: 1rem;
+    border: 1px solid #ececec;
+}
+
+ul {
+    list-style: none;
+    margin: 0 auto;
+}
+
+ul li {
+    float: left;
+    padding: .5rem;
+}
+
+body:after, ul:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+/* plain img */
+.plain img {
+    width: 100%;
+    margin-right: 1rem;
+}
+
+/* srcset */
+.srcset img {
+    width: 100%;
+    margin-right: 1rem;
+}
+
+/* srcset + sizes */
+.sizes img {
+    width: 100%;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 400px) {
+    .sizes img {
+        width: 30%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .sizes img {
+        width: 50%;
+    }
+}
+
+/* picture media */
+.picture-media img {
+    width: 100%;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 400px) {
+    .picture-media img {
+        width: 30%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .picture-media img {
+        width: 50%;
+    }
+}
+
+/* picture type */
+.picture-type img {
+    width: 100%;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 400px) {
+    .picture-type img {
+        width: 30%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .picture-type img {
+        width: 50%;
+    }
+}
