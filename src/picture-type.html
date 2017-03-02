@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Code Class Responsive Images</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="picture-type">
+
+<nav>
+    <ul>
+        <li><a href="/">Plain img</a></li>
+        <li><a href="srcset.html">Srcset</a></li>
+        <li><a href="sizes.html">Srcset + sizes</a></li>
+        <li><a href="picture-media.html">Picture with media</a></li>
+        <li>Picture with type</li>
+    </ul>
+</nav>
+
+<h1>Picture with type</h1>
+
+<!-- solution -->
+<picture>
+    <source type="image/webp" srcset="img/desktop-l.webp" media="(min-width: 700px)">
+    <source type="image/webp" srcset="img/tablet-l.webp" media="(min-width: 500px)">
+    <source type="image/webp" srcset="img/phone-l.webp">
+    <source srcset="img/desktop-l.jpg" media="(min-width: 700px)">
+    <source srcset="img/tablet-l.jpg" media="(min-width: 500px)">
+    <source srcset="img/phone-l.jpg">
+    <img src="img/desktop-l.jpg" alt="¯\_(ツ)_/¯">
+</picture>
+
+<!-- bonus -->
+<!--<picture>-->
+    <!--<source type="image/webp"-->
+            <!--srcset="img/desktop-s.webp 250w,-->
+                    <!--img/desktop-m.webp 425w,-->
+                    <!--img/desktop-l.webp 650w"-->
+            <!--sizes="(min-width: 700px) 375px,-->
+                   <!--(min-width: 400px) 30vw,-->
+                   <!--100vw"-->
+            <!--media="(min-width: 700px)">-->
+    <!--<source type="image/webp"-->
+            <!--srcset="img/tablet-s.webp 250w,-->
+                    <!--img/tablet-m.webp 425w,-->
+                    <!--img/tablet-l.webp 650w"-->
+            <!--sizes="(min-width: 700px) 375px,-->
+                   <!--(min-width: 400px) 30vw,-->
+                   <!--100vw"-->
+            <!--media="(min-width: 500px)">-->
+    <!--<source type="image/webp"-->
+            <!--srcset="img/phone-s.webp 250w,-->
+                    <!--img/phone-m.webp 425w,-->
+                    <!--img/phone-l.webp 650w"-->
+            <!--sizes="(min-width: 700px) 375px,-->
+                   <!--(min-width: 400px) 30vw,-->
+                   <!--100vw">-->
+    <!--<source srcset="img/desktop-s.jpg 250w,-->
+                    <!--img/desktop-m.jpg 425w,-->
+                    <!--img/desktop-l.jpg 650w"-->
+            <!--sizes="(min-width: 700px) 375px,-->
+                   <!--(min-width: 400px) 30vw,-->
+                   <!--100vw"-->
+            <!--media="(min-width: 700px)">-->
+    <!--<source srcset="img/tablet-s.jpg 250w,-->
+                    <!--img/tablet-m.jpg 425w,-->
+                    <!--img/tablet-l.jpg 650w"-->
+            <!--sizes="(min-width: 700px) 375px,-->
+                   <!--(min-width: 400px) 30vw,-->
+                   <!--100vw"-->
+            <!--media="(min-width: 500px)">-->
+    <!--<source srcset="img/phone-s.jpg 250w,-->
+                    <!--img/phone-m.jpg 425w,-->
+                    <!--img/phone-l.jpg 650w"-->
+            <!--sizes="(min-width: 700px) 375px,-->
+                   <!--(min-width: 400px) 30vw,-->
+                   <!--100vw">-->
+    <!--<img src="img/desktop-l.jpg" alt="¯\_(ツ)_/¯">-->
+<!--</picture>-->
+
+<h2>Current source:</h2>
+<output></output>
+
+<script src="js/index.js"></script>
+</body>
+</html>
